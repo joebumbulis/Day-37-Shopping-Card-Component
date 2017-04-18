@@ -7,7 +7,8 @@ class Cart extends React.Component {
     constructor (props) {
       super(props);
 
-      this.handleClick = this.handleClick.bind(this)
+      this.handleClick = this.handleClick.bind(this);
+      this.addClick = this.addClick.bind(this);
     }
 
   handleClick (id) {
@@ -16,12 +17,18 @@ class Cart extends React.Component {
       }
     }
 
+  addClick (id) {
+    return ()=>{
+        this.props.dispatch({ type: "ADD_ITEM", id: id})
+      }
+    }
+
   render () {
     return (
       <main>
       <p>Total ${this.props.total}</p>
         {this.props.cartItems.map((item, i)=>{
-          return <CartItems  key={i} item={item} removeClick={this.handleClick(item.id)}/>
+          return <CartItems  key={i} item={item} removeClick={this.handleClick(item.id)} addClick={this.addClick(item.id)}/>
       })}
       </main>
     );

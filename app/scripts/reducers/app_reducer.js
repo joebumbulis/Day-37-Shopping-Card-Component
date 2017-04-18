@@ -43,6 +43,9 @@ export default function AppReducer (state, action) {
     case "REMOVE_ITEM":
     console.log("I am removing an item");
     let removeItems = state.cartItems.slice();
+
+    case "ADD_ITEM":
+    console.log("I am adding an item");
 };
 
 
