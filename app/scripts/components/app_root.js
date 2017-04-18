@@ -2,14 +2,14 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Route, Link, NavLink } from 'react-router-dom'
 import container from '../containers/all.js'
-
+import Cart from './cart.js'
 
 const NavBar = () => {
   return (
     <nav>
       <NavLink to="/">Home</NavLink>
       <br />
-      <NavLink to="/about">About</NavLink>
+      <NavLink to="/cart">Cart</NavLink>
       <br />
       <NavLink to="/contact-us">Contact Them</NavLink>
     </nav>
@@ -28,9 +28,8 @@ class AppRoot extends React.Component {
   render () {
     return (
       <main>
-        <NavBar/>
         <section>
-          <Route render={this.onHeaderClicked} />
+          <Cart />
         </section>
       </main>
     );

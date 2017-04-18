@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import AppRoot from './components/app_root.js'
-import About from './components/about.js'
-import Contact from './components/contact.js'
+import Cart from './components/cart.js'
+import CartItems from './components/cart_items.js'
 
 const FooBar = () => (<div>Hi</div>)
 
@@ -16,8 +16,8 @@ export default function app() {
         <div>
           <Route path="/"      component={AppRoot}/>
           <Route path="/foobar"  component={FooBar} />
-          <Route exact path="/about" component={About} />
-          <Route path="/contact-us" component={Contact} />
+          <Route exact path="/cart" component={Cart} />
+          <Route path="/cart-tems" component={CartItems} />
         </div>
       </Router>
     </Provider>,

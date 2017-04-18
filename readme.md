@@ -1,4 +1,4 @@
-# Day 37 Shopping Card Component
+# Day 37 Shopping Cart Component
 Practice Creating Reusable Components
 
 ## Explorer Mode
