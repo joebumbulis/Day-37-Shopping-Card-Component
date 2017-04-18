@@ -7,16 +7,12 @@ class CartItems extends React.Component {
 
   constructor (props) {
     super(props);
-    this.state = {}
+    // this.state = {}
 
-    // this.handleChange = this.handleChange.bind(this)
+    // this.handleClick = this.handleClick.bind(this)
   }
 
-  // handleChange (e) {
-  //   this.setState({
-  //     name: e.target.value
-  // //   })
-  // }
+
 
   render () {
     return (
@@ -25,7 +21,7 @@ class CartItems extends React.Component {
           <th>{this.props.item.itemName} </th>
           <td>{this.props.item.price}</td>
         </tr></tbody></table>
-
+        <button onClick={this.props.removeClick} >remove from cart</button>
       </section>
     )
   }
