@@ -19,7 +19,7 @@ class CartItems extends React.Component {
       <section>
         <table><tbody><tr>
           <th>{this.props.item.itemName} </th>
-          <td>{this.props.item.price}</td>
+          <td>${this.props.item.price}</td>
         </tr></tbody></table>
         <button onClick={this.props.removeClick} >remove from cart</button>
         <button onClick={this.props.addClick} >add to cart</button>

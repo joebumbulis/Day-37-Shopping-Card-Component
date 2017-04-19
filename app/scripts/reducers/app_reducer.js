@@ -1,5 +1,6 @@
 import { createStore } from 'redux'
 import store from '../store.js'
+import addItem from '../actions/add_item.js'
 
 const initialState = {
   items: [
@@ -34,21 +35,23 @@ export default function AppReducer (state, action) {
   }
 
   switch(action.type){
-    case "TESTING":
-    console.log("Testing reducer");
-    console.log(state);
-    return state;
-
-
     case "REMOVE_ITEM":
-    console.log("I am removing an item");
-    let removeItems = state.cartItems.slice();
+    if (state.total <= 0){
+      newTotal = 0
+    } else {
+    var newItem = action.price
+    var newTotal = {total: state.total - newItem};
+    }
+    return Object.assign({}, state, newTotal)
+
 
     case "ADD_ITEM":
-    console.log("I am adding an item");
-};
+    var total = parseFloat(state.total)
+    var newItem = (action.price).fixed(2)
+    var newTotal = (total + newItem)
+    return Object.assign({}, state, {total: newTotal});
 
-
+  };
 
   console.debug("Unhandled Action!", action.type);
   return state;

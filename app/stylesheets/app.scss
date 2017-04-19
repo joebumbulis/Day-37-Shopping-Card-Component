@@ -1,20 +1,44 @@
-$big-font: 15rem;
 
-.jumbo {
-    color: #333;
-    font-size: $big-font;
-    margin: 0;
-    text-shadow: 1px 2px 1px #DEDEDE, 2px 3px 0 #FEFEFE, -1px -1px 0 #222;
-}
 
 html {
     body {
         margin: 0;
         padding: 0;
-        background: #CACACA;
+        color: black;
+        font-size: 1.5rem;
+        background: linear-gradient(to right, #eacda3, #d6ae7b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
 }
 
-.active {
-    font-weight: bold;
+table {
+  margin: .3rem auto;
+}
+
+table * {
+text-transform: uppercase;}
+
+section {
+  border: solid .1rem #eacda3;
+  text-align: center;
+
+}
+
+button {
+  display: inline-block;
+  margin: .5rem auto;
+  background: black;
+  color: #d6ae7b;
+  width: 130px;
+  height: 30px;
+  border: none;
+  border-left: .1rem solid;
+  cursor: crosshair;
+}
+
+p {
+  background: black;
+  text-align: center;
+  color: #eacda3;
+  font-size: 2rem;
+  text-transform: uppercase;
 }
