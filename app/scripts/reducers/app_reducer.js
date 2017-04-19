@@ -36,19 +36,20 @@ export default function AppReducer (state, action) {
 
   switch(action.type){
     case "REMOVE_ITEM":
-    if (state.total <= 0){
-      newTotal = 0
-    } else {
     var newItem = action.price
     var newTotal = {total: state.total - newItem};
+    if (state.total <= 0){
+      state.total = 0
+    } else {
+
     }
     return Object.assign({}, state, newTotal)
 
 
     case "ADD_ITEM":
-    var total = parseFloat(state.total)
-    var newItem = (action.price).fixed(2)
-    var newTotal = (total + newItem)
+    var total = parseFloat(state.total);
+     var newItem = action.price;
+     var newTotal = (total + newItem).toFixed(2);
     return Object.assign({}, state, {total: newTotal});
 
   };
